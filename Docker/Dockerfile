@@ -74,7 +74,7 @@ RUN     mkdir --parents --mode=0755 /var/lib/XDMoD-ingest-queue/error
 #
 RUN     chown -R munge:munge /etc/munge/ /var/log/munge/
 RUN     chmod 0700 /etc/munge/ /var/log/munge/
-RUN     /usr/sbin/munged
+# RUN     /usr/sbin/munged
 COPY    --chown=0:0 XDMoD-start /usr/sbin/XDMoD-start
 RUN     chmod 0755 /usr/sbin/XDMoD-start
 CMD     /usr/sbin/XDMoD-start

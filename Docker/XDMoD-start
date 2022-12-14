@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Entry point for the XDMoD container. 
+# Entry point for the XDMoD container. .
 #
 
 ingest_log() {
