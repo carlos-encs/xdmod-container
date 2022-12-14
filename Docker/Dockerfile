@@ -72,7 +72,7 @@ RUN     mkdir --parents --mode=0755 /var/lib/XDMoD-ingest-queue/error
 #
 # Command to execute when container is started:
 #
-RUN     chown -R munge: /etc/munge/ /var/log/munge/
+RUN     chown -R munge:munge /etc/munge/ /var/log/munge/
 RUN     chmod 0700 /etc/munge/ /var/log/munge/
 RUN     /usr/sbin/munged
 COPY    --chown=0:0 XDMoD-start /usr/sbin/XDMoD-start
