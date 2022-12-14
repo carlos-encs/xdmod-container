@@ -16,7 +16,7 @@ grep '^date\.timezone =' /etc/php.ini >/dev/null 2>/dev/null
 if [ $? -ne 0 -a ! -f /etc/php.d/date.ini ]; then
     cat <<EOT > /etc/php.d/date.ini
 ;
-; Default timezone
+; Default timezone 
 ;
 date.timezone = America/New_York
 
