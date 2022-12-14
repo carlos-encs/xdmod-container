@@ -53,6 +53,8 @@ RUN     yum -y install https://github.com/ubccr/xdmod/releases/download/v9.5.0/x
 #
 # Install Munge:
 #
+RUN     groupadd -g 966 munge
+RUN     useradd  -m -c "MUNGE Uid 'N' Gid Emporium" -d /var/lib/munge -u 966 -g munge  -s /sbin/nologin munge
 RUN     yum -y install munge munge-libs munge-devel
 
 #
@@ -70,8 +72,6 @@ RUN     mkdir --parents --mode=0755 /var/lib/XDMoD-ingest-queue/error
 #
 # Command to execute when container is started:
 #
-RUN     groupadd -g 966 munge
-RUN     useradd  -m -c "MUNGE Uid 'N' Gid Emporium" -d /var/lib/munge -u 966 -g munge  -s /sbin/nologin munge
 RUN     chown -R munge: /etc/munge/ /var/log/munge/
 RUN     chmod 0700 /etc/munge/ /var/log/munge/
 RUN     /usr/sbin/munged
