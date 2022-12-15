@@ -77,5 +77,6 @@ RUN     chmod 0700 /etc/munge/ /var/log/munge/
 # RUN     /usr/sbin/munged
 COPY    --chown=0:0 XDMoD-start /usr/sbin/XDMoD-start
 RUN     chmod 0755 /usr/sbin/XDMoD-start
-RUN     mkdir /var/commands
+# RUN     mkdir /var/commands
+# ENV     PATH="$PATH:/var/commands/"
 CMD     /usr/sbin/XDMoD-start
