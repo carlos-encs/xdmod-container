@@ -69,6 +69,7 @@ RUN     mkdir --parents --mode=0755 /var/lib/XDMoD-ingest-queue/in
 RUN     mkdir --parents --mode=0755 /var/lib/XDMoD-ingest-queue/out
 RUN     mkdir --parents --mode=0755 /var/lib/XDMoD-ingest-queue/error
 
+RUN     mkdir --mode=0755 /etc/mungetmp/
 #
 # Command to execute when container is started:
 #

@@ -3,6 +3,8 @@
 # Entry point for the XDMoD container.
 #
 
+copy /etc/mungetmp/munge.key /etc/munge/
+
 ingest_log() {
     local ts="$(date '+%Y-%m-%d %H:%M:%S%z')"
     printf "[${ts}] %s\n" "$@" >> /var/log/xdmod/ingest-queue.log
